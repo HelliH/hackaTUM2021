@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Save Our Beers!</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header">
+        <div class="header__burger">
+          <span></span>
+        </div>
+        <div class="header__logo header__logo_full">
+          <span>Save Our Beers!</span>
+        </div>
+        <div class="header__logo header__logo_small">
+          <span>Save Our Beers!</span>
+        </div>
+        <nav class="header__nav">
+          <div class="header__item">
+            <a href="#graphics">Explore the Data</a>
+          </div>
+          <div class="header__item">
+            <a href="#portfolio">Temperature Prediction Model</a>
+          </div>
+          <div class="header__item">
+            <a href="#aboutme">Our Team</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="main-page border-class">
+        <div class="main-page__top">
+          <div class="main-page__left">
+            <h1 class="title-1">
+              Save Our Beers!
+            </h1>
+            <div class="main-page__mobile-img">
+              <img src="img/000.png" alt="">
+            </div>
+            <div class="main-page__list">
+              <p>We are the joined team of international students located in Germany and Belgium who learned the truly beauty of good beer and are ready to fight for it!</p>
+              <p>With three Data Scientists and one Front-End developer in our team, we chose the ZEISS challenge without hesitations. It was the best way to apply our data analysis skills to real-life issues and present results in the shape of a real demo.</p>
+              <p>We never heard about microscopes application in the brewery, so the pitch early caught our attention. Also, data in the shape of time series were the final weight to say “yes!” to the ZEISS!</p>
+            </div>
+          </div>
+          <div class="main-page__right">
+            <div class="main-page__desc-img">
+              <img src="img/111.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="main-page__bottom">
+          <div class="advantage">
+            <div class="advantage__item">
+              <div class="advantage__marker">
+              </div>
+              <div class="advantage__text">
+                <a href="https://github.com/HelliH/hackaTUM2021" class="" target="_blank">
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div class="advantage__item">
+              <div class="advantage__marker">
+              </div>
+              <div class="advantage__text">
+                <a href="https://devpost.com/software/so-to" class="">
+                  hackaTUM
+                </a>
+              </div>
+            </div>
+            <div class="advantage__item">
+              <div class="advantage__marker">
+              </div>
+              <div class="advantage__text">
+                <a href="https://www.zeiss.com/corporate/int/careers/digital-it-at-zeiss.html" class="">
+                  ZEISS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-page border-class height-class" id="graphics">
+        <div class="title-2">Explore the Data</div>
+        <div class="selects-block">
+          <select class="grid-select" name="select" id="select-region">
+            <option id="region0" disabled selected>Select region</option>
+            <option id="region1" value="value1">APAC</option>
+            <option id="region2" value="value2">DACH</option>
+            <option id="region3" value="value3">EMEA</option>
+            <option id="region4" value="value4">US + Canada</option>
+          </select>
+          <select class="grid-select" name="select" id="select-micro">
+            <option id="micro0" disabled selected>Select a microscope</option>
+          </select>
+        </div>
+        <div class="iframe-block">
+          <div class="iframe-block_content"><p>Select parameters</p><p> to see the plot!</p></div>
+        </div>
+      </div>
+
+      <div class="portfolio-page border-class" id="portfolio">
+        <div class="title-2">
+          Temperature Prediction Model
+        </div>
+        <div class="portfolio" id="app">
+          <div class="portfolio-screen">
+            <a href="" class="portfolio-screen__img" target="_blank">
+              <img :src="image" alt="" />
+            </a>
+            <div class="portfolio-screen__text">
+              <span>We develop Gaussian processes-based approach to detect anomalies based on learned likelihoods of
+                individual points.
+                The model could highly accurate fill missing values as well.</span>
+            </div>
+          </div>
+          <div class="portfolio-list">
+            <portfolio-list__item v-for="portfolio in portfolios" :key="portfolio.portfolioId" :portfolio="portfolio"
+              @update-portfolio="updateportfolio"></portfolio-list__item>
+          </div>
+        </div>
+      </div>
+      <div class="about-me border-class height-class" id="aboutme">
+        <div class="title-2">
+          Our Team
+        </div>
+        <div class="about-us">
+          <div class="about-us__item">
+            <div class="about-us__photo">
+              <img src="img/photo-olha.jpg" alt="">
+            </div>
+            <div class="about-us__name">
+              <p>Olha</p>
+              <p>Kaminska</p>
+            </div>
+            <div class="about-us__text">
+              <p>Ph.D. student</p>
+              <p>in Computer Science</p>
+              <p>at Ghent University (Belgium)</p>
+              <p>
+                <a href="mailto:Olha.Kaminska@ugent.be">
+                  Olha.Kaminska@ugent.be
+                </a>
+              </p>
+              <a href="https://www.linkedin.com/in/olha-kaminska-97027513a/">
+                LinkedIn
+              </a>
+              <a href="https://github.com/olha-kaminska">
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="about-us__item">
+            <div class="about-us__photo">
+              <img src="img/photo-viacheslav.jpg" alt="">
+            </div>
+            <div class="about-us__name">
+              <p>Viacheslav</p>
+              <p>Komisarenko</p>
+            </div>
+            <div class="about-us__text">
+              <p>Ph.D. student</p>
+              <p>in Computer Science</p>
+              <p>at Tartu University (Estonia)</p>
+              <p>
+                <a href="mailto:Viacheslav.Komisarenko@ut.ee">
+                  Viacheslav.Komisarenko@ut.ee
+                </a>
+              </p>
+              <a href="https://www.linkedin.com/in/komisarenkov/">
+                LinkedIn
+              </a>
+              <a href="https://github.com/slavikkom">
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="about-us__item">
+            <div class="about-us__photo">
+              <img src="img/photo-olena.jpg" alt="">
+            </div>
+            <div class="about-us__name">
+              <p>Olena</p>
+              <p>Horokh</p>
+            </div>
+            <div class="about-us__text">
+              <p>Master Student</p>
+              <p>Computational Modeling and Simulation - Visual Computing</p>
+              <p>TU Dresden</p>
+              <a href="mailto:horokh.olena@gmail.com">
+                Horokh.Olena@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/olena-horokh-5821b8170/">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="about-us__item">
+            <div class="about-us__photo">
+              <img src="img/photo-tim.jpg" alt="">
+            </div>
+            <div class="about-us__name">
+              <p>Timur</p>
+              <p>Iamaliev</p>
+            </div>
+            <div class="about-us__text">
+              <p>FrontEnd Developer</p>
+              <p>SEO-Optimizer</p>
+              <a href="mailto:sev.timur@yandex.ru">
+                sev.timur@yandex.ru
+              </a>
+              <a href="https://github.com/SevTimur/">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="container">
+    <div class="scroll-btn-block">
+      <a href="#" id="back-to-top" class="">
+        <img src="img/arrow-up.svg" alt="">
+      </a>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@v2"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/portfoliovue.js"></script>
+</body>
+
+</html>
